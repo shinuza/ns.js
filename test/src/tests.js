@@ -1,6 +1,7 @@
 function fo() { return { x: 5 }; }
 function fe() { return {}; }
 
+
 module('Namespace', {
   setup: function() {
     delete window.ACME;
@@ -25,4 +26,12 @@ test('No override', function() {
   ns('ACME.Coyote.Crossbow', fo);
   ns('ACME.Coyote.Crossbow.Win', fe);
   deepEqual(Object.keys(window.ACME.Coyote.Crossbow), ['Failure', 'Win']);
+});
+
+test('Context', function() {
+  ns('ACME.Coyote.QunitCopy', function($) {
+    return $;
+  }, QUnit);
+
+  deepEqual(ACME.Coyote.QunitCopy, QUnit);
 });
