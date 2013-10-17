@@ -35,3 +35,9 @@ test('Context', function() {
 
   deepEqual(ACME.Coyote.QunitCopy, QUnit);
 });
+
+test('Return value', function() {
+  ns('ACME.Coyote.Crossbow.Failure', fo);
+
+  deepEqual(ns('ACME.Coyote.Crossbow.Failure'), fo());
+});
