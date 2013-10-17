@@ -1,5 +1,9 @@
 ;(function(root) {
 
+  /**
+   * Namespace 0.2.0
+   */
+
   function ns(path, fn) {
     var i = 0
       , context = Array.prototype.slice.call(arguments, 2)
