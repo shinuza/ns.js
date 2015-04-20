@@ -1,5 +1,5 @@
-Namespace
-=========
+Namespace 0.3.1
+===============
 
 If you happen to work with people who think using Java inspired namespaces in Javascript is a good idea, you will need this.
 

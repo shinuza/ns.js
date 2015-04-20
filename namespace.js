@@ -1,7 +1,7 @@
 ;(function(root) {
 
   /**
-   * Namespace 0.3.0
+   * Namespace 0.3.1
    */
 
   function ns(path, fn) {
