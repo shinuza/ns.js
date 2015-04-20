@@ -1,8 +1,10 @@
-;(function(root) {
+;(function() {
 
   /**
    * Namespace 0.3.1
    */
+
+  var root = this;
 
   function ns(path, fn) {
     var i = 0
@@ -21,6 +23,13 @@
     return parent || null;
   }
 
-  root.ns = ns;
+  if (typeof exports !== 'undefined') {
+    if (typeof module !== 'undefined' && module.exports) {
+      exports = module.exports = ns;
+    }
+    exports.ns = ns;
+  } else {
+    root.ns = ns;
+  }
 
-}(this));
+}());
