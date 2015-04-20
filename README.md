@@ -1,29 +1,50 @@
 Namespace
 =========
 
-The easy way to create a namespace in javascript context
+If you happen to work with people who think using Java inspired namespaces in Javascript is a good idea, you will need this.
 
-Without namespace:
 
-```js
-var my = my || {};
-```
+Usage
+=====
 
-With namespace:
+## Creating a package
 
 ```js
 namespace('my.awesome.package', function(){
-    return { foo: 'bar' };
+    return { foo : 'bar' };
 });
 ```
 
-### License
+## Retrieving a package
 
-Copyright (C) <year> <copyright holders>
+```js
+var package = namespace('my.awesome.package'); // { foo : 'bar' }
+var missingPackage = namespace('my.awesome.notfound'); // null
+```
 
+## Package protection
 
-Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+```js
+namespace('my.awesome.package', function(){
+    return { foo : 'bar' };
+});
 
-The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+// This is ignored
+namespace('my.awesome', function(){
+    return { bar : 'baz' };
+});
 
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+namespace('my.awesome.other.package', function(){
+    return { buz : 'bur' };
+});
+
+var package = namespace('my.awesome.package'); // { foo : 'bar' }
+```
+
+## Passing dependencies
+
+```js
+namespace('my.awesome.package', function($){
+    return $('div');
+}, jQuery);
+```
