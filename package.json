@@ -3,6 +3,10 @@
   "version": "0.3.0",
   "description": "A namespace creator",
   "main": "namespace.js",
+  "devDependencies": {
+    "grunt": "",
+    "grunt-contrib-qunit": "^0.7.0"
+  },
   "directories": {
     "test": "test"
   },
