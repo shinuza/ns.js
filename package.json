@@ -1,5 +1,5 @@
 {
-  "name": "ns",
+  "name": "ns.js",
   "version": "0.4.1",
   "description": "A namespace creator",
   "main": "namespace.js",
@@ -16,7 +16,7 @@
   "keywords": [
     "namespace"
   ],
-  "repository": "https://github.com/shinuza/namespace.js",
+  "repository": "https://github.com/shinuza/ns.js",
   "author": "Samori Gorse",
   "license": "MIT"
 }

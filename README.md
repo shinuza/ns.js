@@ -10,19 +10,19 @@ Installation
 For node.js / io.js
 
 ```sh
-npm install namespace
+npm install ns.js
 ```
 
 then require the module
 
 ```js
-var ns = require('namespace');
+var ns = require('ns.js');
 ```
 
 In the browser
 
 ```html
-<script type="text/javascript" src="namespace.js"></script>
+<script type="text/javascript" src="ns.js"></script>
 ```
 
 Usage
