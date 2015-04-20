@@ -4,7 +4,7 @@
   "description": "A namespace creator",
   "main": "namespace.js",
   "devDependencies": {
-    "grunt": "",
+    "grunt": "~0.4.5",
     "grunt-contrib-qunit": "^0.7.0"
   },
   "directories": {
