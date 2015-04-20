@@ -10,7 +10,7 @@ Usage
 ## Creating a package
 
 ```js
-namespace('my.awesome.package', function(){
+ns('my.awesome.package', function(){
     return { foo : 'bar' };
 });
 ```
@@ -18,33 +18,33 @@ namespace('my.awesome.package', function(){
 ## Retrieving a package
 
 ```js
-var package = namespace('my.awesome.package'); // { foo : 'bar' }
-var missingPackage = namespace('my.awesome.notfound'); // null
+var package = ns('my.awesome.package'); // { foo : 'bar' }
+var missingPackage = ns('my.awesome.notfound'); // null
 ```
 
 ## Package protection
 
 ```js
-namespace('my.awesome.package', function(){
+ns('my.awesome.package', function(){
     return { foo : 'bar' };
 });
 
 // This is ignored
-namespace('my.awesome', function(){
+ns('my.awesome', function(){
     return { bar : 'baz' };
 });
 
-namespace('my.awesome.other.package', function(){
+ns('my.awesome.other.package', function(){
     return { buz : 'bur' };
 });
 
-var package = namespace('my.awesome.package'); // { foo : 'bar' }
+var package = ns('my.awesome.package'); // { foo : 'bar' }
 ```
 
 ## Passing dependencies
 
 ```js
-namespace('my.awesome.package', function($){
+ns('my.awesome.package', function($){
     return $('div');
 }, jQuery);
 ```
