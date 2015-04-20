@@ -41,3 +41,9 @@ test('Return value', function() {
 
   deepEqual(ns('ACME.Coyote.Crossbow.Failure'), fo());
 });
+
+test('Return missing value', function() {
+  ns('ACME.Coyote.Foobar.Failure', fo);
+
+  strictEqual(ns('ACME.Coyote.Crossbow.Failure'), null);
+});

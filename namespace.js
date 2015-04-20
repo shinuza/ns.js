@@ -18,7 +18,7 @@
       parent = parent[components[i]];
     }
 
-    return parent;
+    return parent || null;
   }
 
   root.ns = ns;
