@@ -1,6 +1,6 @@
 {
-  "name": "namespace",
-  "version": "0.3.1",
+  "name": "ns",
+  "version": "0.4.1",
   "description": "A namespace creator",
   "main": "namespace.js",
   "devDependencies": {

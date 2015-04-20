@@ -1,8 +1,29 @@
-Namespace 0.3.1
+Namespace 0.4.1
 ===============
 
 If you happen to work with people who think using Java inspired namespaces in Javascript is a good idea, you will need this.
 
+
+Installation
+============
+
+For node.js / io.js
+
+```sh
+npm install namespace
+```
+
+then require the module
+
+```js
+var ns = require('namespace');
+```
+
+In the browser
+
+```html
+<script type="text/javascript" src="namespace.js"></script>
+```
 
 Usage
 =====
