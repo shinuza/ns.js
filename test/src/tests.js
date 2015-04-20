@@ -28,7 +28,7 @@ test('No override', function() {
   deepEqual(Object.keys(window.ACME.Coyote.Crossbow), ['Failure', 'Win']);
 });
 
-test('Context', function() {
+test('Params', function() {
   ns('ACME.Coyote.QunitCopy', function($) {
     return $;
   }, QUnit);
