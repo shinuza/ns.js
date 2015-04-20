@@ -1,11 +1,9 @@
-Namespace 0.4.1
-===============
+# Namespace 0.4.1 # Travis Build [![Build Status](https://travis-ci.org/shinuza/ns.js.png?branch=master)](https://travis-ci.org/shinuza/ns.js)
 
 If you happen to work with people who think using Java inspired namespaces in Javascript is a good idea, you will need this.
 
 
-Installation
-============
+# Installation
 
 For node.js / io.js
 
@@ -25,8 +23,7 @@ In the browser
 <script type="text/javascript" src="ns.js"></script>
 ```
 
-Usage
-=====
+# Usage
 
 ## Creating a package
 
